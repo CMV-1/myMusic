@@ -1,2 +1,2 @@
-# myMusic
-my cloud music
+# 网易云音乐小程序
+防网易云音乐
