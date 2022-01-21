@@ -1,0 +1,26 @@
+<!--pages/register/register.wxml-->
+<view class="registerContainer">
+  <view class="logo">
+    <image src="../../static/images/logo.png"></image>
+  </view>
+  <view class="input-content">
+    <view class="inputItem">
+      <text class="tit">手机号码</text>
+      <input type="text" placeholder="手机号"/>
+    </view>
+    <view class="inputItem">
+      <text class="tit">密码</text>
+      <input type="password" placeholder="密码"/>
+    </view>
+    <button class="confirmBtn">注册</button>
+  </view>
+  <view class="otherLogin">
+    <text>关联社交账号快速登录方式</text>
+    <view class="otherLoginImg">
+      <image src="../../static/images/wechat.png"></image>
+      <image src="../../static/images/qq.png"></image>
+      <image src="../../static/images/weibo.png"></image>
+    </view>
+  </view>
+</view>
+

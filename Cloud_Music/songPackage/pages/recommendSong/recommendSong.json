@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar",
+    "bottomControl": "/components/bottomControl/bottomControl"
+  },
+  "navigationBarTitleText": "每日推荐",
+  "navigationBarBackgroundColor": "#171a22",
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom"
+  
+}

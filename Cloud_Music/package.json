@@ -1,0 +1,9 @@
+{
+  "name": "wyy-music",
+  "version": "1.0.0",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "pubsub-js": "^1.9.4",
+    "weui-miniprogram": "^1.0.8"
+  }
+}

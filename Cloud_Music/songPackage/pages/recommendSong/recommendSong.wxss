@@ -1,0 +1,124 @@
+.recommendSongContainer {
+  margin-bottom: 110rpx;
+}
+
+.recommendSongContainer .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 500rpx;
+  overflow: hidden;
+}
+
+.recommendSongContainer .header image {
+  width: 130%;
+  transform: translate(-8%,0%);
+}
+
+.recommendSongContainer .header .date {
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+  margin-left: -150rpx;
+  margin-top: -100rpx;
+  width: 300rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fbfbfc;
+}
+
+.header .date .day {
+  font-size: 70rpx;
+  font-weight: 500;
+}
+
+.header .date .month {
+  font-size: 50rpx;
+} 
+
+/* 列表区域 */
+.listContainer {
+  padding: 10rpx 20rpx 0rpx;
+}
+
+.listHeader {
+  position: fixed;
+  top: 500rpx;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  transform: translateY(-40rpx);
+  border-radius: 20rpx;
+}
+
+.playAll {
+  margin-left: 20rpx;
+}
+
+.listHeader .playAll text {
+  padding-right: 14rpx;
+}
+
+.listHeader .selectAll text {
+  padding-right: 10rpx;
+  font-size: 30rpx;
+}
+/* 内容区 */
+.listScroll {
+  margin-top: 540rpx;
+}
+.scrollItem {
+  position: relative;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.scrollItem image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+}
+
+.musicInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.musicInfo text {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scrollItem .iconfont {
+  position: absolute;
+  right: 0;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+}
+
+.tip {
+  margin-top: 540rpx;
+  font-size: 28rpx;
+  color: #aaa;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center; 
+}
+

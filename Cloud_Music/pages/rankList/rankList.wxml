@@ -1,0 +1,23 @@
+<scroll-view scroll-y style="height:calc(100vh - 110rpx)">
+  <!-- 官方榜 -->
+  <view class="official">
+    <view class="title" hidden="{{rankList[0].length==0}}">官方榜</view>
+    <view class="rankingItem" wx:for="{{rankList[0]}}" wx:key="index" bindtap="toMusicList" data-musiclistid="{{item.id}}">
+      <image src="{{item.coverImgUrl}}"></image>
+      <view class="tracks">
+        <view class="tracksItem" wx:for="{{item.tracks}}" wx:for-item="tracksItem" wx:for-index="tracksIndex" wx:key="tracksIndex">
+          {{(tracksIndex+1)+'.'+tracksItem.first+' - '+tracksItem.second}}
+        </view>
+        <view class="tips">{{item.updateFrequency}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 全球榜 -->
+  <view class="global">
+    <view class="title" hidden="{{rankList[1].length==0}}">全球榜</view>
+    <view class="globalTracks">
+      <musicListCard musicList="{{rankList[1]}}" style="width:100vw;" cardHeight="unset" bind:toMusicList="toMusicList"></musicListCard>
+    </view>
+  </view>
+</scroll-view>
+<bottomControl></bottomControl>

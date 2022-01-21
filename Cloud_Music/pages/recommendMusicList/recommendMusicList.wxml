@@ -1,0 +1,6 @@
+<!--pages/recommendMusicList/recommendMusicList.wxml-->
+<view>
+  <musicListCard class="musicListCard" musicList="{{recommendMusicList}}" bind:toMusicList="toMusicList" cardMarginTop="20rpx"></musicListCard>
+  <bottomControl></bottomControl>
+</view>
+

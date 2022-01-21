@@ -1,0 +1,67 @@
+<!-- 首页 -->
+<view class="musicListSquareContainer" style="display:{{showPage==0?'block':'none'}}">
+    <!-- 头部区域 -->
+    <view class="head">
+        <!-- 歌单导航 -->
+        <scroll-view class="tags" scroll-x scroll-into-view="t{{tagIndex >3?tagIndex-2:0}}" scroll-with-animation>
+            <view class="tagItem {{index==tagIndex ?'selected':''}}" wx:for="{{headTags}}" wx:key="id" id="t{{index}}"
+                bindtap="changeTag">
+                {{item.name}}
+            </view>
+        </scroll-view>
+        <!-- 添加按钮 -->
+        <view class="moreTag" bindtap="toMoreTags">
+            <text class="iconfont icon-tianjia"></text>
+        </view>
+    </view>
+    <!-- 列表区域 -->
+    <view class="body">
+        <!-- 加载时阻止操作的透明遮罩层 -->
+        <view class="mask" style="display:{{isMaskShow?'block':'none'}}"></view>
+        <!-- 标签下的歌单列表 -->
+        <swiper class="categorySwiper" current="{{tagIndex}}" bindchange="changeCurrent">
+            <swiper-item class="categorySwiperItem" wx:for="{{tagMusicList}}" wx:key="index">
+                <musicListCard isMore="{{isMore}}" musicList="{{item}}" bind:reachBottom="reachBottom"
+                    bind:toMusicList="toMusicList"></musicListCard>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
+<!-- 所有标签页面 -->
+<view class="allTags" style="display:{{showPage==1?'block':'none'}}">
+    <!-- 头部 -->
+    <view class="returnButton" bindtap="goBackSquare">
+        <text class="iconfont icon-fanhui"></text>
+        <text class="info">返回到歌单广场</text>
+    </view>
+    <!-- 列表区域 -->
+    <view wx:if="{{allTags.length!=0}}">
+        <view class="category" wx:for="{{allTags}}" wx:key="index">
+            <view class="categoryTitle">{{item[0].key}}</view>
+            <view class="categoryList">
+                <view class="categoryItem" wx:for="{{item[1]}}" wx:key="index" wx:for-item="i" bindtap="selectTag"
+                    data-tagname="{{i.name}}">
+                    {{i.name}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="loadingContainer" wx:else>
+        <mp-loading show="{{isMore}}"></mp-loading>
+    </view>
+    <view class="placeholder"></view>
+</view>
+<!-- 标签详情页面 -->
+<view class="tagDetail" style="display:{{showPage==2?'block':'none'}}">
+    <!-- 头部区域 -->
+    <view class="head" bindtap="goBackTags">
+        <text class="iconfont icon-fanhui"></text>
+        <text class="tagName">{{tagName}}</text>
+    </view>
+    <!-- 列表区域 -->
+    <view class="body">
+        <musicListCard musicList="{{tagDetail}}" bind:toMusicList="toMusicList" bind:reachBottom="tagDetailReachBottom" cardMarginTop="20rpx" isMore="{{isMore}}">
+        </musicListCard>
+    </view>
+</view>
+<bottomControl></bottomControl>
