@@ -2,7 +2,7 @@
 防网易云音乐<br>
 1、现在master分支部署node.js服务器<br>
 2、之后在main分支编写小程序<br>
-接口网址:https://binaryify.github.io/NeteaseCloudMusicApi/<br>
+接口网址:[https://binaryify.github.io/NeteaseCloudMusicApi](https://neteasecloudmusicapi.js.org/#/?id=%e8%8e%b7%e5%8f%96%e7%94%a8%e6%88%b7%e7%94%b5%e5%8f%b0)/<br>
 仅供学习，请勿售卖！
 ### 页面展示：
 ![image](https://user-images.githubusercontent.com/72381928/150471197-e8d700b9-d9c1-4f1f-9516-bc68e15ea04b.png)<br>
